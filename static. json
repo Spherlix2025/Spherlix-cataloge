@@ -1,0 +1,9 @@
+{
+  "root": ".",
+  "routes": [
+    {
+      "path": "/*",
+      "handler": "index.html"
+    }
+  ]
+}
