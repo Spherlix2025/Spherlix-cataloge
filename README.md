@@ -1,2 +1,2 @@
-# Spherlix-cataloge
-First build spherlix 1.0
+# Spherlix Catalog
+First MVP build of the Spherlix catalog project for immersive content.
