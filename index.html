@@ -1,17 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Spherlix Catalog</title>
-  <style>
-    body { font-family: Arial, sans-serif; background-color: #0b0b0b; color: #f0f0f0; }
-    .hero { padding: 40px; text-align: center; background: #111; }
-    .hero h1 { font-size: 28px; color: #10f4f0; }
-  </style>
+    <meta charset="UTF-8">
+    <title>Spherlix Catalog</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #0b0b0b; color: #f0f0f0; margin: 0; }
+        .hero { padding: 60px 20px; text-align: center; background: #111; }
+        .hero h1 { font-size: 32px; color: #10f4f0; }
+        .buttons, .filters { display: flex; justify-content: center; gap: 10px; margin: 20px; flex-wrap: wrap; }
+        button { padding: 10px 16px; background: #10f4f0; border: none; color: #000; font-weight: bold; border-radius: 6px; }
+        .catalog { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 20px; }
+        .card { background: #222; border-radius: 10px; padding: 16px; }
+        .card h3 { color: #10f4f0; margin: 0 0 10px 0; }
+        .meta { font-size: 13px; color: #aaa; margin-bottom: 12px; }
+        .card-buttons { display: flex; gap: 6px; flex-wrap: wrap; }
+        .form { background: #111; padding: 20px; text-align: center; margin-top: 40px; }
+        input, textarea { padding: 10px; margin: 8px; width: 80%; max-width: 400px; border: none; border-radius: 4px; }
+    </style>
 </head>
 <body>
-  <div class="hero">
-    <h1>Explore Immersive Spherical Worlds</h1>
-  </div>
+    <div class="hero">
+        <h1>Explore Immersive Spherical Worlds</h1>
+        <div class="buttons">
+            <button>Купить</button>
+            <button>Создать</button>
+            <button>Каталог</button>
+        </div>
+    </div>
+
+    <div class="filters">
+        <button>Все</button>
+        <button>Fulldome</button>
+        <button>AI Генерация</button>
+        <button>Природа</button>
+        <button>Абстракция</button>
+    </div>
+
+    <div class="catalog">
+        <div class="card">
+            <h3>Мистический портал</h3>
+            <div class="meta">4K • Equirectangular</div>
+            <div class="card-buttons">
+                <button>Смотреть</button>
+                <button>Скачать</button>
+                <button>Заказать</button>
+            </div>
+        </div>
+        <div class="card">
+            <h3>Пейзаж Аватара</h3>
+            <div class="meta">5K • Fisheye</div>
+            <div class="card-buttons">
+                <button>Смотреть</button>
+                <button>Скачать</button>
+                <button>Заказать</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="form">
+        <h3>Заявка на адаптацию AI-контента</h3>
+        <input type="text" placeholder="Ваше имя" required><br>
+        <input type="email" placeholder="Email" required><br>
+        <textarea placeholder="Опишите, что нужно адаптировать..."></textarea><br>
+        <button>Отправить заявку</button>
+    </div>
 </body>
 </html>
