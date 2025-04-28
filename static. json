@@ -1,13 +1,4 @@
 {
-  "root": ".",
-  "routes": [
-    {
-      "path": "/*",
-      "handler": "index.html"
-    }
-  ]
-}
-{
   "version": 2,
   "builds": [
     { "src": "index.html", "use": "@vercel/static" }
