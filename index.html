@@ -1,81 +1,140 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spherilix Catalog</title>
-  <style>
-    body { background-color: #0b0b0b; color: #f0f0f0; font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    .hero { text-align: center; padding: 40px; background: #111; }
-    .hero h1 { font-size: 32px; color: #10f4f0; }
-    .buttons, .filters { display: flex; justify-content: center; flex-wrap: wrap; margin: 20px; gap: 10px; }
-    .catalog { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; padding: 20px; }
-    .card { background: #222; border-radius: 10px; overflow: hidden; box-shadow: 0 0 10px #000; text-align: center; }
-    .card img { width: 100%; height: auto; }
-    .card-content { padding: 15px; }
-    .card h3 { color: #10f4f0; margin: 10px 0; }
-    .card .meta { font-size: 12px; color: #aaa; margin-bottom: 10px; }
-    .card-buttons button { margin: 5px; padding: 8px 12px; background: #10f4f0; border: none; color: #000; border-radius: 5px; font-weight: bold; cursor: pointer; }
-    .form { background: #111; padding: 30px; text-align: center; }
-    .form input, .form textarea { width: 80%; margin: 10px 0; padding: 10px; border: none; border-radius: 5px; }
-    .form button { background: #10f4f0; color: #000; padding: 10px 20px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
-  </style>
-</head>
-<body>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #0b0b0b;
+  color: #f0f0f0;
+  margin: 0;
+}
 
-<div class="hero">
-  <h1>Explore Immersive Spherical Worlds</h1>
-</div>
+.hero {
+  padding: 60px 20px;
+  text-align: center;
+  background: #111;
+}
 
-<div class="buttons">
-  <button>Купить</button>
-  <button>Создать</button>
-  <button>Каталог</button>
-</div>
+.hero h1 {
+  font-size: 32px;
+  color: #10f4f0;
+}
 
-<div class="filters">
-  <button>Все</button>
-  <button>Fulldome</button>
-  <button>AI Генерация</button>
-  <button>Природа</button>
-  <button>Абстракция</button>
-</div>
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #222;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(16, 244, 240, 0.6);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h3 {
+  color: #10f4f0;
+  margin: 16px;
+  font-size: 20px;
+}
+
+.meta {
+  font-size: 13px;
+  color: #aaa;
+  margin: 0 16px 16px 16px;
+}
+
+.card-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 16px;
+}
+
+.card-buttons button {
+  padding: 10px 18px;
+  background: #10f4f0;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.card-buttons button:hover {
+  background: #0cd1d1;
+  transform: scale(1.05);
+}
+
+</style>
 
 <div class="catalog">
+
   <div class="card">
-    <img src="https://images.unsplash.com/photo-1600369671945-f758d6b5d6c1?fit=crop&w=600&q=80" alt="Мистический портал">
-    <div class="card-content">
-      <h3>Мистический портал</h3>
-      <div class="meta">4K - Equirectangular</div>
-      <div class="card-buttons">
-        <button>Смотреть</button>
-        <button>Скачать</button>
-        <button>Заказать</button>
-      </div>
+    <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=600&q=80" alt="Mystical Portal">
+    <h3>Мистический портал</h3>
+    <div class="meta">4K - Equirectangular</div>
+    <div class="card-buttons">
+      <button>Смотреть</button>
+      <button>Скачать</button>
+      <button>Заказать</button>
     </div>
   </div>
 
   <div class="card">
-    <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68?fit=crop&w=600&q=80" alt="Пейзаж Аватара">
-    <div class="card-content">
-      <h3>Пейзаж Аватара</h3>
-      <div class="meta">5K - Fisheye</div>
-      <div class="card-buttons">
-        <button>Смотреть</button>
-        <button>Скачать</button>
-        <button>Заказать</button>
-      </div>
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Avatar Landscape">
+    <h3>Пейзаж Аватара</h3>
+    <div class="meta">5K - Fisheye</div>
+    <div class="card-buttons">
+      <button>Смотреть</button>
+      <button>Скачать</button>
+      <button>Заказать</button>
     </div>
   </div>
-</div>
 
-<div class="form">
-  <h2>Заявка на адаптацию AI-контента</h2>
-  <input type="text" placeholder="Ваше имя"><br>
-  <input type="email" placeholder="Email"><br>
-  <textarea placeholder="Опишите, что нужно адаптировать..."></textarea><br>
-  <button>Отправить заявку</button>
-</div>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Ocean Dreams">
+    <h3>Мечты океана</h3>
+    <div class="meta">6K - Equirectangular</div>
+    <div class="card-buttons">
+      <button>Смотреть</button>
+      <button>Скачать</button>
+      <button>Заказать</button>
+    </div>
+  </div>
 
-</body>
-</html>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1496386261206-1c4e9f7fcf65?auto=format&fit=crop&w=600&q=80" alt="Desert Mirage">
+    <h3>Мираж пустыни</h3>
+    <div class="meta">5K - Fisheye</div>
+    <div class="card-buttons">
+      <button>Смотреть</button>
+      <button>Скачать</button>
+      <button>Заказать</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="Cosmic Voyage">
+    <h3>Космическое путешествие</h3>
+    <div class="meta">8K - Dome Format</div>
+    <div class="card-buttons">
+      <button>Смотреть</button>
+      <button>Скачать</button>
+      <button>Заказать</button>
+    </div>
+  </div>
+
+</div>
