@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Spherlix Preview</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spherlix Catalog</title>
   <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth; /* Плавная прокрутка */
+    }
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #000;
-      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      color: white;
     }
-    header {
-      background: url('https://via.placeholder.com/1440x800') no-repeat center center;
-      background-size: cover;
+    .hero {
       height: 100vh;
+      background-image: url('https://i.imgur.com/L7XwZT9.jpg'); /* <-- Заменить на свой фон если нужно */
+      background-size: cover;
+      background-position: center;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -22,76 +27,109 @@
       text-align: center;
       padding: 20px;
     }
-    header h1 {
-      font-size: 48px;
+    .hero h1 {
+      font-size: 3em;
       margin-bottom: 20px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
     }
-    header button {
-      padding: 15px 30px;
-      font-size: 18px;
-      border: none;
-      background: #00d0ff;
-      color: #000;
-      cursor: pointer;
-      border-radius: 8px;
+    .hero a {
+      background: linear-gradient(45deg, #00c8ff, #00ffa3);
+      padding: 15px 35px;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.3em;
+      border-radius: 50px;
+      transition: 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 200, 255, 0.6);
+    }
+    .hero a:hover {
+      background: linear-gradient(45deg, #00ffa3, #00c8ff);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 200, 255, 0.8);
     }
     .catalog {
-      padding: 60px 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
       background: #111;
+      padding: 50px 20px;
+    }
+    .catalog h2 {
+      margin-bottom: 30px;
+      font-size: 2.5em;
+      text-align: center;
     }
     .card {
       background: #222;
-      border-radius: 8px;
-      overflow: hidden;
+      border-radius: 15px;
+      margin: 20px auto;
+      padding: 30px;
+      max-width: 600px;
       text-align: center;
-      padding-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      transition: 0.3s;
     }
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-    .card h3 {
-      margin: 15px 10px 0;
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
     }
     .description {
+      background: #111;
       padding: 40px 20px;
-      background: #000;
-      font-size: 18px;
-      line-height: 1.6;
       text-align: center;
+    }
+    .description p {
+      font-size: 1.3em;
+      color: #ccc;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2em;
+      }
+      .hero a {
+        font-size: 1em;
+        padding: 12px 25px;
+      }
+      .catalog h2 {
+        font-size: 2em;
+      }
+      .description p {
+        font-size: 1.1em;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
+  <section class="hero">
     <h1>Добро пожаловать в Spherlix</h1>
-    <button>Смотреть каталог</button>
-  </header>
+    <a href="#catalog">Смотреть каталог</a>
+  </section>
 
-  <section class="catalog">
+  <section id="catalog" class="catalog">
+    <h2>Каталог контента</h2>
+
     <div class="card">
-      <img src="https://via.placeholder.com/400x200" alt="Контент 1">
       <h3>Полнокупольное видео 1</h3>
+      <p>Инновационный 360° опыт.</p>
     </div>
+
     <div class="card">
-      <img src="https://via.placeholder.com/400x200" alt="Контент 2">
-      <h3>Интерактивный 360° опыт</h3>
+      <h3>Интерактивный проект 2</h3>
+      <p>Погружение в новые миры.</p>
     </div>
+
     <div class="card">
-      <img src="https://via.placeholder.com/400x200" alt="Контент 3">
-      <h3>Сферическое шоу</h3>
+      <h3>VR экспириенс 3</h3>
+      <p>Будущее здесь и сейчас.</p>
     </div>
+
   </section>
 
   <section class="description">
-    <p>
-      Spherlix — это портал для доступа к уникальному сферическому и полнокупольному контенту. Наши визуальные решения выделяются, погружают и создают WOW-эффект в любом месте — от фестиваля до музея.
-    </p>
+    <p>Spherlix — это уникальная платформа для полного погружения в иммерсивный контент. Вместе мы создаём новое поколение развлечений и обучения!</p>
   </section>
 
 </body>
